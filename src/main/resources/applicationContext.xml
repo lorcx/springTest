@@ -9,4 +9,16 @@
 		<property name="age" value="123"/>
 	</bean>
 
+	<!--aop-->
+	<bean id="testAdvisor" class=""></bean>
+	<bean id="testAop" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value=""/>
+		<property name="target">
+			<bean class=""></bean>
+		</property>
+		<property name="interceptorNames">
+			<list><value>testAdvisor</value></list>
+		</property>
+	</bean>
+
 </beans>
